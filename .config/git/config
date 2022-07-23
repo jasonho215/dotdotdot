@@ -1,0 +1,17 @@
+[commit]
+  verbose = 2
+
+[diff]
+  algorithm = histogram
+
+[difftool]
+  trustExitCode = true
+
+[push]
+  default = nothing
+
+[user]
+  useConfigOnly = true
+
+[diff "blackbox"]
+  textconv = gpg --use-agent -q --batch --decrypt

@@ -6,6 +6,20 @@ if [ -r /etc/profile ]; then
   . /etc/profile
 fi
 
+# android
+if [ -d "$HOME/Library/Android/sdk" ]; then
+	export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
+	export ANDROID_HOME="$ANDROID_SDK_ROOT"
+	export PATH="$ANDROID_SDK_ROOT/tools:$PATH"
+	export PATH="$ANDROID_SDK_ROOT/tools/bin:$PATH"
+	export PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
+fi
+
+# android java
+if [ -d "/Applications/Android Studio.app/Contents/jre/Contents/Home" ]; then
+	export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/Contents/Home"
+fi
+
 # homebrew
 export PATH="/opt/homebrew/bin:$PATH"
 if [ -x "/opt/homebrew/bin/brew" ]; then

@@ -25,3 +25,8 @@ fi
 # GPG
 GPG_TTY=$(tty)
 export GPG_TTY
+
+# Ruby
+export GEM_HOME=$HOME/.gem
+export PATH=$GEM_HOME/bin:$PATH
+

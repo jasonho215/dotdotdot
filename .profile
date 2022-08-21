@@ -28,5 +28,5 @@ export GPG_TTY
 
 # Ruby
 export GEM_HOME=$HOME/.gem
-export PATH=$GEM_HOME/bin:$PATH
+export PATH=$GEM_HOME/ruby/2.6.0/bin:$PATH
 

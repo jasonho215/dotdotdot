@@ -45,4 +45,6 @@ export GEM_HOME=$HOME/.gem
 export PATH=$GEM_HOME/ruby/2.6.0/bin:$PATH
 
 # Rust
-. "$HOME/.cargo/env"
+if [ -r "$HOME/.cargo/env" ]; then
+  . "$HOME/.cargo/env"
+fi

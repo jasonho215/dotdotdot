@@ -16,8 +16,8 @@ if [ -d "$HOME/Library/Android/sdk" ]; then
 fi
 
 # android java
-if [ -d "/Applications/Android Studio.app/Contents/jre/Contents/Home" ]; then
-	export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/Contents/Home"
+if [ -d "/Applications/Android Studio.app/Contents/jbr/Contents/Home" ]; then
+	export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
 fi
 
 # homebrew
@@ -41,10 +41,12 @@ GPG_TTY=$(tty)
 export GPG_TTY
 
 # Ruby
-export GEM_HOME=$HOME/.gem
-export PATH=$GEM_HOME/ruby/2.6.0/bin:$PATH
+#export GEM_HOME=$HOME/.gem
+#export PATH=$GEM_HOME/ruby/2.6.0/bin:$PATH
+eval "$(rbenv init - zsh)"
 
 # Rust
 if [ -r "$HOME/.cargo/env" ]; then
   . "$HOME/.cargo/env"
 fi
+

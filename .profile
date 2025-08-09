@@ -6,6 +6,9 @@ if [ -r /etc/profile ]; then
   . /etc/profile
 fi
 
+# bin directory in home dir
+export PATH="$HOME/bin:$PATH"
+
 # android
 if [ -d "$HOME/Library/Android/sdk" ]; then
 	export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
